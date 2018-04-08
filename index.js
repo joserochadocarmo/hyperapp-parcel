@@ -1,6 +1,18 @@
-import { app } from 'hyperapp'
-import state from './state'
-import {actions, view} from "./components/Indecision"
-import "./style.scss";
+import * as Indecision from './components/Indecision';
+import * as Todo from './components/Todo';
+import * as Chat from './components/Chat';
+import define from 'hyperapp-customelements';
+import './style.scss';
 
-app(state, actions, view, document.body)
+var chat = define({
+	name: 'x-chat',
+	...Chat,
+});
+
+define({ name: 'x-todo', ...Todo });
+
+define({
+	name: 'x-indecision',
+	...Indecision,
+	observedAttributes: [{ max: Number }],
+});

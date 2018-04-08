@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "hyperapp": "^1.1.2"
+    "@pusher/chatkit": "^0.7.8",
+    "hyperapp": "^1.2.5",
+    "hyperapp-customelements": "0.0.4"
   },
   "devDependencies": {
     "babel-preset-hyperapp": "^2.3.0",
